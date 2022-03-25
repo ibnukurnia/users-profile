@@ -175,8 +175,8 @@ func getUser(w http.ResponseWriter, r *http.Request)  {
 		}
 
 		type Response struct {
-			User interface{} 
-			RiskProfile interface{}
+			User interface{} `json:"user"`
+			RiskProfile interface{} `json:"risk"`
 		}
 
 		res := Response{User: user,RiskProfile: riskProfile}
