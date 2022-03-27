@@ -15,7 +15,7 @@ import (
 
 func main() {
 
-	log.Println("Running at Port 8000")
+	log.Println("Running at Port 5005")
 	
 	r := mux.NewRouter()
 
@@ -30,7 +30,7 @@ func main() {
 	r.HandleFunc("/users", users.CreateUser).Methods("OPTIONS", "POST")
 	r.HandleFunc("/login", users.Login).Methods("OPTIONS", "POST")
 	
-	http.ListenAndServe(":8000", r)
+	http.ListenAndServe(":5005", r)
 
 }
 
