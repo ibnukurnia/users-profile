@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2022 at 04:33 AM
+-- Generation Time: Mar 27, 2022 at 09:00 AM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 8.0.9
 
@@ -35,19 +35,6 @@ CREATE TABLE `risk_profile` (
   `mm_percent` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `risk_profile`
---
-
-INSERT INTO `risk_profile` (`id`, `user_id`, `bond_percent`, `stock_percent`, `mm_percent`) VALUES
-(4, 16, 46, 34, 20),
-(5, 17, 22, 72, 6),
-(6, 18, 22, 72, 6),
-(7, 19, 22, 72, 6),
-(8, 20, 46, 34, 20),
-(9, 21, 46, 34, 20),
-(10, 22, 46, 34, 20);
-
 -- --------------------------------------------------------
 
 --
@@ -59,19 +46,6 @@ CREATE TABLE `users` (
   `name` varchar(225) NOT NULL,
   `age` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `age`) VALUES
-(16, 'Jon', 45),
-(17, 'Budi', 23),
-(18, 'Budi', 23),
-(19, 'Bambang', 23),
-(20, 'Jaja', 46),
-(21, 'Jaja', 46),
-(22, 'Jaja', 46);
 
 --
 -- Indexes for dumped tables
