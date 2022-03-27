@@ -1,9 +1,17 @@
 package structs
 
 type User struct {
-	Id   int    `json:"id"`
-	Name string `json:"name"`
-	Age  int    `json:"age"`
+	Id       int    `json:"id"`
+	Name     string `json:"name"`
+	Age      int    `json:"age"`
+	Password string `json:"-"`
+}
+
+type UserRegist struct {
+	Id       int    `json:"id"`
+	Name     string `json:"name"`
+	Age      int    `json:"age"`
+	Password string `json:"password"`
 }
 
 type RiskProfile struct {
@@ -18,5 +26,11 @@ type UserDetail struct {
 	Id          int         `json:"id"`
 	Name        string      `json:"name"`
 	Age         int         `json:"age"`
+	Password    string      `json:"-"`
 	RiskProfile RiskProfile `json:"riskProfile"`
+}
+
+type UserLogin struct {
+	Name     string `json:"name"`
+	Password string `json:"password"`
 }

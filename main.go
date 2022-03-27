@@ -28,6 +28,7 @@ func main() {
 	r.HandleFunc("/users", users.GetUsers).Methods("OPTIONS","GET")
 	r.HandleFunc("/users/{id}",users.GetUser).Methods("OPTIONS", "GET")
 	r.HandleFunc("/users", users.CreateUser).Methods("OPTIONS", "POST")
+	r.HandleFunc("/login", users.Login).Methods("OPTIONS", "POST")
 	
 	http.ListenAndServe(":8000", r)
 
